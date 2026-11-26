@@ -1,6 +1,6 @@
 # Mes parties dans les derniers projets
 
-**Sofia Negreche** – CFC informaticienne, classe E1A, Geneva Institute of Technology
+**Sofia Negreche** – Bachelor IT, classe E1A, Geneva Institute of Technology
 GitHub : [@sofianegreche](https://github.com/sofianegreche)
 
 ---
