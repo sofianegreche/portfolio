@@ -128,10 +128,10 @@ La passerelle 192.168.10.1 est renseignée pour un futur routeur, mais elle n'es
 
 | Test | VLAN source → destination | Résultat attendu | Résultat obtenu |
 |---|---|---|---|
-| PC1 → PC2 | 10 → 10 | Réponses | ✅ 5/5 réponses, TTL 64 |
-| PC3 → PC4 | 20 → 20 | Réponses | ✅ 5/5 réponses, TTL 64 |
-| PC1 → PC3 | 10 → 20 | Bloqué | ❌ host not reachable |
-| PC2 → PC4 | 10 → 20 | Bloqué | ❌ host not reachable |
+| PC1 → PC2 | 10 → 10 | Réponses | 5/5 réponses, TTL 64 |
+| PC3 → PC4 | 20 → 20 | Réponses | 5/5 réponses, TTL 64 |
+| PC1 → PC3 | 10 → 20 | Bloqué | host not reachable |
+| PC2 → PC4 | 10 → 20 | Bloqué | host not reachable |
 
 ### 8.1 Communication dans un même VLAN
 
