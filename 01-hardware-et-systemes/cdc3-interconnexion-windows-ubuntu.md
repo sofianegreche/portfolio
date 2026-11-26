@@ -229,16 +229,16 @@ Après correction d'un éventuel problème, les tests `ping` doivent être effec
 
 | Vérification                                | Résultat  |
 | ------------------------------------------- | --------- |
-| Windows connecté au réseau VMware           | ✅         |
-| Ubuntu connecté au réseau VMware            | ✅         |
-| Windows et Ubuntu sur le même segment       | ✅         |
-| Adresse IP Windows vérifiée avec `ipconfig` | ✅         |
-| Adresse IP Ubuntu vérifiée avec `ip a`      | ✅         |
-| Ping Windows → Ubuntu                       | ✅         |
-| Ping Ubuntu → Windows                       | ✅         |
-| Connectivité bidirectionnelle               | ✅         |
-| Pare-feu vérifié en cas de problème         | ✅         |
-| Configuration VMware vérifiée               | ✅         |
+| Windows connecté au réseau VMware           | OK         |
+| Ubuntu connecté au réseau VMware            | OK         |
+| Windows et Ubuntu sur le même segment       | OK         |
+| Adresse IP Windows vérifiée avec `ipconfig` | OK         |
+| Adresse IP Ubuntu vérifiée avec `ip a`      | OK         |
+| Ping Windows → Ubuntu                       | OK         |
+| Ping Ubuntu → Windows                       | OK         |
+| Connectivité bidirectionnelle               | OK         |
+| Pare-feu vérifié en cas de problème         | OK         |
+| Configuration VMware vérifiée               | OK         |
 | Partage SMB/Samba                           | Optionnel |
 
 ---
