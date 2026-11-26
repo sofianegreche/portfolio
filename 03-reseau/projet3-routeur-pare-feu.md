@@ -211,11 +211,11 @@ show ip
 
 | N° | Test | Poste | Commande | Résultat attendu | Résultat obtenu | Capture |
 |---|---|---|---|---|---|---|
-| 1 | Ping Internet | PC1 | `ping 8.8.8.8` | Réponses | ✅ 5/5, TTL 127 | 08 |
-| 2 | Ping de la passerelle | PC1 | `ping 192.168.10.1` | Réponses | ✅ 5/5 | 09 |
-| 3 | Résolution DNS | PC1 | `ping google.com` | Nom résolu + réponses | ✅ résolu en 172.217.208.101 | 09 |
-| 4 | Port 443 (HTTPS) | PC1 | `ping google.com -P 6 -p 443` | Connexion TCP établie | ✅ Connect / SendData / Close | 11 |
-| 5 | Port 80 (HTTP) | PC1 | `ping google.com -P 6 -p 80` | Connexion TCP établie | ✅ Connect / SendData / Close | 11 |
+| 1 | Ping Internet | PC1 | `ping 8.8.8.8` | Réponses | 5/5, TTL 127 | 08 |
+| 2 | Ping de la passerelle | PC1 | `ping 192.168.10.1` | Réponses | 5/5 | 09 |
+| 3 | Résolution DNS | PC1 | `ping google.com` | Nom résolu + réponses | résolu en 172.217.208.101 | 09 |
+| 4 | Port 443 (HTTPS) | PC1 | `ping google.com -P 6 -p 443` | Connexion TCP établie | Connect / SendData / Close | 11 |
+| 5 | Port 80 (HTTP) | PC1 | `ping google.com -P 6 -p 80` | Connexion TCP établie | Connect / SendData / Close | 11 |
 
 ![08-PC1-ping-internet](https://hackmd.io/_uploads/HJbPo6noGl.png)
 
@@ -247,10 +247,10 @@ L'adresse privée de PC1 (192.168.10.11) est traduite en adresse WAN de R1 (192.
 
 | N° | Test | Poste | Commande | Résultat attendu | Résultat obtenu | Capture |
 |---|---|---|---|---|---|---|
-| 6 | HTTP (port 80) | PC2 | `ping google.com -P 6 -p 80` | ❌ bloqué | ❌ bloqué : *ICMP type 3, code 13 — Communication administratively prohibited* | 13 |
-| 7 | HTTPS (port 443) | PC1 | `ping google.com -P 6 -p 443` | ✅ autorisé | ✅ Connect / SendData / Close | 14 |
-| 8 | Telnet (port 23) | PC1 | `ping 8.8.8.8 -P 6 -p 23` | ❌ bloqué | ❌ bloqué : *ICMP type 3, code 13 — Communication administratively prohibited* | 15 |
-| 9 | Ping Internet | PC1 | `ping 8.8.8.8` | ✅ autorisé | ✅ réponses | 17 |
+| 6 | HTTP (port 80) | PC2 | `ping google.com -P 6 -p 80` | bloqué | bloqué : *ICMP type 3, code 13 — Communication administratively prohibited* | 13 |
+| 7 | HTTPS (port 443) | PC1 | `ping google.com -P 6 -p 443` | autorisé | Connect / SendData / Close | 14 |
+| 8 | Telnet (port 23) | PC1 | `ping 8.8.8.8 -P 6 -p 23` | bloqué | bloqué : *ICMP type 3, code 13 — Communication administratively prohibited* | 15 |
+| 9 | Ping Internet | PC1 | `ping 8.8.8.8` | autorisé | réponses | 17 |
 
 ![13-PC2-port80-bloque](https://hackmd.io/_uploads/BJf6sp2jze.png)
 
