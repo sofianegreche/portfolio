@@ -4,7 +4,7 @@
 **Outils :** VS Code, Firefox
 **Durée :** environ 40 minutes
 
-## 🎯 Objectif
+## Objectif
 
 Relier une feuille de style à une page HTML, cibler des éléments avec des sélecteurs de base, et changer couleurs, polices et fonds.
 
@@ -69,7 +69,7 @@ h1 {
 }
 ```
 
-✅ Le titre devient rouge-orangé.
+Le titre devient rouge-orangé.
 
 ---
 
@@ -88,7 +88,7 @@ p {
 
 Dans le HTML : `<p class="important">…</p>`
 
-✅ Tous les paragraphes sont gris foncé, sauf le paragraphe « important » en rouge et en gras.
+Tous les paragraphes sont gris foncé, sauf le paragraphe « important » en rouge et en gras.
 
 ![image](https://hackmd.io/_uploads/SkDn7MZafe.png)
 
@@ -115,8 +115,8 @@ header {
 }
 ```
 
-✅ Fond de page gris clair et bande bleue autour du titre.
-⚠️ Le titre reste rouge-orangé, car `h1 { color: tomato; }` cible directement le titre. Rouge sur bleu se lit mal.
+Fond de page gris clair et bande bleue autour du titre.
+Le titre reste rouge-orangé, car `h1 { color: tomato; }` cible directement le titre. Rouge sur bleu se lit mal.
 
 ![image](https://hackmd.io/_uploads/BJn6XfbTfg.png)
 
@@ -144,7 +144,7 @@ a {
 }
 ```
 
-✅ Police Arial, titre en majuscules et centré, lien sans soulignement.
+Police Arial, titre en majuscules et centré, lien sans soulignement.
 
 ![image](https://hackmd.io/_uploads/ByW1VzbpMx.png)
 
@@ -163,7 +163,7 @@ a:hover {
 }
 ```
 
-✅ Les titres passent en Georgia, et le lien devient rouge et souligné au survol de la souris.
+Les titres passent en Georgia, et le lien devient rouge et souligné au survol de la souris.
 
 ![image](https://hackmd.io/_uploads/r1BgVM-pGe.png)
 
@@ -181,7 +181,7 @@ a:hover {
 ![image](https://hackmd.io/_uploads/SJhzEzb6zg.png)
 
 
-**Erreur rencontrée :** j'ai tapé `#blue` au lieu de `blue`. Le `#` ne sert que pour les codes hexadécimaux. Le navigateur a barré la règle avec un avertissement ⚠️.
+**Erreur rencontrée :** j'ai tapé `#blue` au lieu de `blue`. Le `#` ne sert que pour les codes hexadécimaux. Le navigateur a barré la règle avec un avertissement.
 
 ![image](https://hackmd.io/_uploads/SkhQNGb6Mx.png)
 
@@ -217,7 +217,7 @@ Dans `style.css` :
 }
 ```
 
-✅ Carte avec un fond bleu très clair, titre en bleu, majuscules, Arial.
+Carte avec un fond bleu très clair, titre en bleu, majuscules, Arial.
 
 ![image](https://hackmd.io/_uploads/HJRrEfb6ze.png)
 
@@ -237,7 +237,7 @@ Dans `style.css` :
 
 ![image](https://hackmd.io/_uploads/BJtvEM-TMe.png)
 
-**Problème rencontré :** le titre et la bande bleue ont disparu. Le texte du `<h1>` était une suggestion grisée de Copilot, donc le titre était vide et sans hauteur.
+**Problème rencontré :** le titre et la bande bleue ont disparu. Le texte du `<h1>` était une suggestion grisée de l’éditeur, donc le titre était vide et sans hauteur.
 ![image](https://hackmd.io/_uploads/BJkGBM-6ze.png)
 
 ![image](https://hackmd.io/_uploads/rJrxSzW6fl.png)
@@ -249,14 +249,14 @@ Dans `style.css` :
 
 ![image](https://hackmd.io/_uploads/ryQ2EMWTzg.png)
 
-✅ Le titre est blanc sur la bande bleue : l'`id` l'emporte sur la règle `h1`.
+Le titre est blanc sur la bande bleue : l'`id` l'emporte sur la règle `h1`.
 
 ![image](https://hackmd.io/_uploads/HkXa4zbazx.png)
 
 
 ---
 
-## ✅ Checklist
+## Checklist
 
 - [x] `style.css` est reliée par `<link>` et fonctionne
 - [x] Je sais écrire une règle (sélecteur, propriété, valeur)
@@ -264,11 +264,11 @@ Dans `style.css` :
 - [x] Je sais changer couleur de texte, fond, police, alignement
 - [x] Je sais utiliser `:hover` et inspecter un style dans les DevTools
 
-## 💡 Ce que j'ai retenu
+## Ce que j'ai retenu
 
 - Toujours **sauvegarder** (`Ctrl+S`) avant de rafraîchir (`F5`).
 - Un **point-virgule** ou une **accolade** oubliés cassent la règle.
 - Un **id** l'emporte sur une **classe**, qui l'emporte sur une **balise** : c'est le sujet de CSS 02.
 - Préférer les **classes** pour styler, l'id est unique par page.
-- Se méfier des **suggestions grisées** de Copilot : ce n'est pas du vrai code.
+- Se méfier des **suggestions grisées** de l’éditeur : ce n'est pas du vrai code.
 
