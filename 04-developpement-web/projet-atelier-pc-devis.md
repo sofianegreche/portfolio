@@ -1,4 +1,4 @@
-# 🖥️ Projet Web – Atelier PC : site de demande de devis
+# Projet Web – Atelier PC : site de demande de devis
 
 | | |
 |---|---|
@@ -69,7 +69,7 @@ flowchart LR
 ### Où sont enregistrées les données ?
 Dans le **localStorage** du navigateur : un petit espace de stockage que chaque navigateur met à disposition des sites. Il ne garde que du **texte**. C'est pour ça qu'on transforme nos tickets en texte avec `JSON.stringify` avant de les enregistrer, et qu'on les retransforme avec `JSON.parse` quand on les relit. [S30] [S31]
 
-⚠️ Les données restent dans **ce navigateur, sur ce PC**. Un autre PC ou un autre navigateur ne verra pas les tickets. C'est une **simulation** de boîte mail, pas un vrai envoi de mail.
+Les données restent dans **ce navigateur, sur ce PC**. Un autre PC ou un autre navigateur ne verra pas les tickets. C'est une **simulation** de boîte mail, pas un vrai envoi de mail.
 
 ### Comment ouvrir le site
 1. Ouvrir le dossier du projet dans **VS Code**
@@ -114,7 +114,7 @@ Projet Devis Fabibou/
 
 ---
 
-## 4. 📖 Les suffixes
+## 4. Les suffixes
 
 ### 4.1 Les extensions de fichiers
 L'extension (ce qu'il y a après le point) dit à l'ordinateur **quel type de fichier** c'est, et donc avec quel programme l'ouvrir.
@@ -449,7 +449,7 @@ Le **DOM** (Document Object Model) est la page HTML vue par le JavaScript, comme
 | `document` | La page entière. | |
 | `document.querySelector("#id")` | **Trouve** le premier élément qui correspond au sélecteur (comme en CSS). Renvoie `null` s'il ne trouve rien. [S42] | `document.querySelector("#email")` |
 | `.value` | Ce qui est **écrit ou choisi** dans un champ. Toujours du **texte**. | `champNumero.value` |
-| `.textContent` | **Remplace le texte** d'un élément. [S43] | `message.textContent = "✅ Demande envoyée"` |
+| `.textContent` | **Remplace le texte** d'un élément. [S43] | `message.textContent = "Demande envoyée"` |
 | `.innerHTML` | **Remplace le contenu HTML** d'un élément (on peut y mettre des balises). [S44] | Construire un mail complet |
 | `.classList.add("x")` | **Ajoute** une classe CSS. [S45] | `message.classList.add("visible")` → déclenche l'animation |
 | `.classList.remove("x")` | **Enlève** une classe CSS. | Recacher le champ « Précisez » |
@@ -548,7 +548,7 @@ const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
 
 #### `boite-mail.js` – Espace technicien
 **Rôle :** afficher chaque ticket comme un mail.
-1. On relit les tickets. S'il n'y en a aucun, on affiche « 📭 Aucune demande »
+1. On relit les tickets. S'il n'y en a aucun, on affiche « Aucune demande »
 2. `forEach` : pour chaque ticket, on crée un `<article>` et on le remplit avec `innerHTML` et un template literal
 3. Pas encore de devis → bouton « Répondre avec un devis » vers la bonne page de réponse. Devis déjà envoyé → classe `repondu` (bordure verte) et rappel du total
 4. On ajoute le mail dans la page avec `appendChild`
@@ -557,7 +557,7 @@ const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
 #### `reponse.js` – les 3 pages de réponse du technicien
 **Rôle :** retrouver la demande, calculer le total, afficher les photos, enregistrer le devis.
 1. **`trouverTicket()`** : une fonction qu'on écrit une fois et qu'on utilise 2 fois (bouton + envoi). Elle cherche le ticket avec `find`
-2. **« Afficher la demande »** (`click`) : 3 cas → numéro inconnu ❌, mauvais service ❌ (ex. un ticket « Réparation » sur la page « Ajout de pièces »), ou affichage du résumé ✅
+2. **« Afficher la demande »** (`click`) : 3 cas → numéro inconnu, mauvais service (ex. un ticket « Réparation » sur la page « Ajout de pièces »), ou affichage du résumé
 3. **Total** (`input`) : `Number(prix) + Number(main d'œuvre)`, affiché avec `toFixed(2)`
 4. **Photos** (`change`) : pour chaque fichier choisi, on crée une `<img>` qui pointe vers `../img/` + le nom du fichier
 5. **Envoi** (`submit`) : on vérifie le ticket, on ajoute un objet `devis` dans le ticket (travaux, pièces, photos, prix, total, délai, message, date), le statut passe à « Devis envoyé », on réenregistre
@@ -567,7 +567,7 @@ const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
 #### `suivi.js` – page Suivre ma demande
 **Rôle :** retrouver le ticket du client et afficher le devis.
 - On transforme le numéro tapé en nombre (`Number`), puis on cherche le ticket (`find`)
-- **3 cas** : numéro inconnu ❌ / pas encore de devis ⏳ / devis disponible 📩
+- **3 cas** : numéro inconnu / pas encore de devis / devis disponible
 - Si le devis existe : on construit les images des photos avec une boucle, puis on affiche tout (travail, pièces, photos, tableau des prix, délai, message)
 
 ---
@@ -594,23 +594,23 @@ L'accessibilité, c'est faire en sorte que le site soit utilisable par tout le m
 
 | Test | Résultat |
 |---|---|
-| Validation HTML de toutes les pages (validateur W3C Nu) [S60] | ✅ 0 erreur, 0 avertissement |
-| Envoyer une demande → elle apparaît dans la boîte mail | ✅ |
-| Envoyer avec un champ obligatoire vide | ✅ bloqué par le navigateur |
-| Choisir « Autre » → le champ « Précisez » apparaît et devient obligatoire | ✅ |
-| Compteur de caractères | ✅ |
-| Numéro d'un autre service sur une page de réponse | ✅ message d'erreur |
-| Total automatique (64.90 + 30 = 94.90) | ✅ |
-| Aperçu des photos | ✅ |
-| Le devis apparaît sur la page de suivi avec photos et tableau | ✅ |
-| Statut « En attente » → « Devis envoyé » dans la boîte mail | ✅ |
-| Affichage mobile (largeur iPhone 375px) : rien ne dépasse | ✅ |
-| Ouvrir l'Espace technicien sans être connecté | ✅ renvoyé vers la connexion |
-| Ouvrir une page de réponse sans être connecté | ✅ renvoyé vers la connexion |
-| Mauvais mot de passe | ✅ message d'erreur + secousse, on reste sur la connexion |
-| `admin` / `admin` | ✅ accès à la boîte mail |
-| « Se déconnecter » puis retour sur la boîte mail | ✅ renvoyé vers la connexion |
-| Console du navigateur (F12) : aucune erreur JavaScript | ✅ |
+| Validation HTML de toutes les pages (validateur W3C Nu) [S60] | 0 erreur, 0 avertissement |
+| Envoyer une demande → elle apparaît dans la boîte mail | OK |
+| Envoyer avec un champ obligatoire vide | bloqué par le navigateur |
+| Choisir « Autre » → le champ « Précisez » apparaît et devient obligatoire | OK |
+| Compteur de caractères | OK |
+| Numéro d'un autre service sur une page de réponse | message d'erreur |
+| Total automatique (64.90 + 30 = 94.90) | OK |
+| Aperçu des photos | OK |
+| Le devis apparaît sur la page de suivi avec photos et tableau | OK |
+| Statut « En attente » → « Devis envoyé » dans la boîte mail | OK |
+| Affichage mobile (largeur iPhone 375px) : rien ne dépasse | OK |
+| Ouvrir l'Espace technicien sans être connecté | renvoyé vers la connexion |
+| Ouvrir une page de réponse sans être connecté | renvoyé vers la connexion |
+| Mauvais mot de passe | message d'erreur + secousse, on reste sur la connexion |
+| `admin` / `admin` | accès à la boîte mail |
+| « Se déconnecter » puis retour sur la boîte mail | renvoyé vers la connexion |
+| Console du navigateur (F12) : aucune erreur JavaScript | OK |
 
 > **Incident :** une demande envoyée n'apparaissait pas dans l'Espace technicien.
 > **Cause :** un ticket créé avec une ancienne version du site n'avait pas le champ `devis`. La boîte mail plantait sur ce ticket et n'affichait plus rien.
@@ -634,30 +634,7 @@ L'accessibilité, c'est faire en sorte que le site soit utilisable par tout le m
 
 ---
 
-## 11. Utilisation de l'IA et recherches
-
-### Ce que l'IA a fait
-- Aide pour **choisir le sujet** et vérifier qu'il colle au barème
-- **Génération de la base du code** (HTML, CSS, JS), avec des commentaires en français sur chaque bloc
-- Aide pour **trouver un bug** (l'incident ci-dessus) et pour la **version mobile**
-- Aide pour rédiger cette documentation et trouver les sources
-
-### Pourquoi on l'a utilisée
-- À l'école, l'utilisation de l'IA est encouragée
-- Gagner du temps sur la structure pour se concentrer sur la **compréhension** du code
-- Le site va plus loin que ce qu'on a vu en une semaine (localStorage, JSON) : l'IA nous a aidés à l'atteindre, et on a vérifié chaque notion dans la documentation officielle (sources ci-dessous)
-
-### Ce que nous avons fait nous-mêmes
-*(à compléter par le groupe : ce que vous avez relu, compris, modifié, testé. Ex. renommage du site, choix des couleurs, tests, préparation de l'oral…)*
-
-### Comment on a vérifié
-- Chaque balise, propriété et commande expliquée dans ce document renvoie à une source officielle (MDN, W3C)
-- Validation du HTML avec le validateur du W3C
-- Tests manuels du parcours complet, sur ordinateur et en mode mobile
-
----
-
-## 12. Sources
+## 11. Sources
 
 ### Général
 - **[S1]** MDN – HTML : https://developer.mozilla.org/fr/docs/Web/HTML
@@ -744,27 +721,3 @@ L'accessibilité, c'est faire en sorte que le site soit utilisable par tout le m
 - **[S60]** Validateur HTML du W3C : https://validator.w3.org/
 - Extension Live Server pour VS Code : https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 
----
-
-## 13. Plan proposé pour le PowerPoint
-*(pour la personne qui fait la présentation, avec la section du HackMD où trouver le contenu)*
-
-| Slide | Contenu | Section |
-|---|---|---|
-| 1 | Titre, groupe, classe E1A | En-tête |
-| 2 | Le projet en une phrase + les contraintes | 1 |
-| 3 | Le parcours client → technicien → client (schéma) | 2 |
-| 4 | Organisation des fichiers | 3 |
-| 5 | Les suffixes et unités | 4 |
-| 6 | HTML : structure d'une page + formulaire avec labels | 5.1, 5.4 |
-| 7 | CSS : Flexbox et Grid (avec capture des cartes) | 6.3, 6.4 |
-| 8 | CSS : les animations | 6.5 |
-| 9 | Version mobile (capture ordinateur vs téléphone) | 6.6 |
-| 10 | JavaScript : événements + « le JS ajoute une classe, le CSS anime » | 7.4, 6.5 |
-| 11 | JavaScript : localStorage et JSON | 7.5 |
-| 12 | Connexion technicien (admin / admin) et ses limites | 7.7, 10 |
-| 13 | Accessibilité | 8 |
-| 14 | Tests + incident résolu | 9 |
-| 15 | Limites et améliorations | 10 |
-| 16 | Utilisation de l'IA | 11 |
-| 17 | Démo en direct (avec connexion) | – |
