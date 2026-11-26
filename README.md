@@ -1,6 +1,6 @@
 # Portfolio – Sofia Negreche
 
-Apprentie **CFC informaticienne** – classe E1A, Geneva Institute of Technology (Genève).
+Apprentie **Bachelor informaticienne** – classe E1A, Geneva Institute of Technology (Genève).
 
 Ce dépôt regroupe mes projets de formation : sites web, projets de groupe, réseau et virtualisation.
 
