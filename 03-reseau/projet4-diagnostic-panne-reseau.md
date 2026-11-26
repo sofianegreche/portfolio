@@ -16,7 +16,7 @@ Un second poste (PC2) sert de **poste témoin** : il permet de savoir si le prob
 
 ## 2. Topologie et plan d'adressage
 
-📷 **Image 1 – Topologie GNS3 avec les configurations**
+**Image 1 – Topologie GNS3 avec les configurations**
 ![image](https://hackmd.io/_uploads/r1n3pB0jMx.png)
 
 | Équipement | Interface | Adresse IP | Masque | Passerelle | Rôle |
