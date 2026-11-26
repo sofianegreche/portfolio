@@ -83,9 +83,9 @@ css
 
 | Taille | Avant | Après |
 |--------|-------|-------|
-| 375 px | Débordement, texte coupé, menu invisible | ✅ 1 colonne, menu centré |
-| 768 px | Débordement horizontal | ✅ 2 colonnes |
-| 1280 px | Correct mais textes petits | ✅ 3 colonnes, textes lisibles |
+| 375 px | Débordement, texte coupé, menu invisible | 1 colonne, menu centré |
+| 768 px | Débordement horizontal | 2 colonnes |
+| 1280 px | Correct mais textes petits | 3 colonnes, textes lisibles |
 
 ## 6. Conclusion
 
