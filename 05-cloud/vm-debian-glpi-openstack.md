@@ -22,7 +22,7 @@ tags: OpenStack, Infomaniak, Debian, GLPI, Hackathon
 | Image | Debian 13 trixie |
 | Gabarit (flavor) | `a4-ram8-disk50-perf1` (4 vCPU, 8 Go RAM, 50 Go disque) |
 | Réseau | `ext-net1` (réseau public) |
-| Adresse IP publique | `<IP_PUBLIQUE>` |
+| Adresse IP publique | (non publiée) |
 | Groupe de sécurité | `glpi-sg` (ports 22, 80, 443) |
 | Paire de clés | `cle-glpi` |
 | Utilisateur SSH | `debian` |
@@ -39,8 +39,7 @@ tags: OpenStack, Infomaniak, Debian, GLPI, Hackathon
 Le lien `api.pub1…` redirige automatiquement vers `api.pub2…`. C'est normal.
 :::
 
-📸 *Capture : page de connexion Horizon (à faire toi-même)*
-![](COLLER_CAPTURE_ICI)
+*Capture à venir : page de connexion Horizon*
 
 ---
 
@@ -160,8 +159,7 @@ df -h /      # → ~50 Go
 cat /etc/debian_version   # → 13.x
 ```
 
-📸 *Capture : connexion SSH réussie + résultat des commandes*
-![](COLLER_CAPTURE_ICI)
+*Capture à venir : connexion SSH réussie + résultat des commandes*
 
 ---
 
@@ -212,8 +210,7 @@ sudo a2ensite glpi
 sudo systemctl reload apache2
 ```
 
-📸 *Capture : configuration Apache / `systemctl status apache2`*
-![](COLLER_CAPTURE_ICI)
+*Capture à venir : configuration Apache / `systemctl status apache2`*
 
 ### 6.5 Assistant d'installation web
 1. Ouvrir http://<IP_PUBLIQUE>
@@ -221,8 +218,7 @@ sudo systemctl reload apache2
 3. Base de données : serveur `localhost`, utilisateur `glpi`, mot de passe choisi à l'étape 6.2
 4. Sélectionner la base `glpi` et terminer l'installation
 
-📸 *Capture : assistant GLPI + page de connexion*
-![](COLLER_CAPTURE_ICI)
+*Capture à venir : assistant GLPI + page de connexion*
 
 ### 6.6 Sécurisation après installation
 - Changer les mots de passe des comptes par défaut : `glpi`, `tech`, `normal`, `post-only`
@@ -231,8 +227,7 @@ sudo systemctl reload apache2
 sudo rm /var/www/glpi/install/install.php
 ```
 
-📸 *Capture : tableau de bord GLPI*
-![](COLLER_CAPTURE_ICI)
+*Capture à venir : tableau de bord GLPI*
 
 ---
 
