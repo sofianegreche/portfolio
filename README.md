@@ -17,10 +17,10 @@ Le détail de ce que j'ai fait dans chaque projet : **[Mes parties dans les proj
 
 ### Hardware et systèmes
 
-- [Cahier des charges 1](01-hardware-et-systemes/cdc1-configurations-hardware.md)
-- [Cahier des charges 2](01-hardware-et-systemes/cdc2-installation-windows-10.md)
-- [Cahier des charges 3](01-hardware-et-systemes/cdc3-interconnexion-windows-ubuntu.md)
-- [Projet 1](01-hardware-et-systemes/projet1-mise-en-service-poste.md)
+- [Cahier des charges 1 — Configurations hardware (PC)](01-hardware-et-systemes/cdc1-configurations-hardware.md)
+- [Cahier des charges 2 — Installation de Windows 10 Pro](01-hardware-et-systemes/cdc2-installation-windows-10.md)
+- [Cahier des charges 3 — Interconnexion Windows 10 et Ubuntu](01-hardware-et-systemes/cdc3-interconnexion-windows-ubuntu.md)
+- [Projet 1 — Mise en service d'un poste de travail](01-hardware-et-systemes/projet1-mise-en-service-poste.md)
 - [Projet 2 — Poste multi-utilisateurs](01-hardware-et-systemes/projet2-poste-multi-utilisateurs.md)
 - [Projet 3 – Migration et sauvegarde d’un poste de travail virtuel](01-hardware-et-systemes/projet3-migration-sauvegarde-poste.md)
 - [Projet 4 – Dépannage et diagnostic d’une panne réseau](01-hardware-et-systemes/projet4-depannage-panne-reseau.md)
@@ -38,7 +38,7 @@ Le détail de ce que j'ai fait dans chaque projet : **[Mes parties dans les proj
 - [Projet 1 : Câblage et adressage IP d'un petit bureau](03-reseau/projet1-cablage-adressage-ip.md)
 - [Projet 2 : Segmentation en VLAN d'un réseau d'entreprise](03-reseau/projet2-segmentation-vlan.md)
 - [Projet 3 — Mise en place d'un routeur/pare-feu pour une petite entreprise](03-reseau/projet3-routeur-pare-feu.md)
-- [Rapport d'intervention – Diagnostic de panne réseau](03-reseau/projet4-diagnostic-panne-reseau.md)
+- [Projet 4 — Diagnostic de panne réseau](03-reseau/projet4-diagnostic-panne-reseau.md)
 - [Projet 5 — Conception réseau complète pour une PME multi-sites](03-reseau/projet5-conception-reseau-pme-multi-sites.md)
 - [TP ICND1 – Interconnexion des sites et sécurisation des accès](03-reseau/tp-icnd1-interconnexion-securisation.md)
 
@@ -48,11 +48,11 @@ Le détail de ce que j'ai fait dans chaque projet : **[Mes parties dans les proj
 - [JavaScript 01 — Console, valeurs et variables](04-developpement-web/javascript-01-console-variables.md)
 - [CSS 01 — Mes premiers styles](04-developpement-web/css-01-premiers-styles.md)
 - [Projet 1 – Site vitrine éléctri'tek](04-developpement-web/projet1-site-vitrine-electritek.md)
-- [Untitled](04-developpement-web/projet2-landing-page-no-code.md)
+- [Projet 2 — Landing page produit avec un outil No-Code](04-developpement-web/projet2-landing-page-no-code.md)
 - [Projet 3 – Formulaire de contact accessible](04-developpement-web/projet3-formulaire-accessible.md)
 - [Projet 4 — Refonte responsive : Boulangerie du Lac](04-developpement-web/projet4-refonte-responsive.md)
 - [Projet 5 — Comparatif Code vs No-Code](04-developpement-web/projet5-code-vs-no-code.md)
-- [HackMD_Projet_Atelier_PC.md](04-developpement-web/projet-atelier-pc-devis.md)
+- [Projet Atelier PC — Site de demande de devis](04-developpement-web/projet-atelier-pc-devis.md)
 
 ### Cloud
 
