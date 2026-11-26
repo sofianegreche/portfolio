@@ -284,26 +284,26 @@ Cette vérification permet de s'assurer que le système ne lance pas inutilement
 
 | Vérification                                | État |
 | ------------------------------------------- | ---- |
-| Windows 10 Pro installé                     | ✅    |
-| Installation en UEFI                        | ✅    |
-| Partitionnement GPT                         | ✅    |
-| Nom du poste configuré                      | ✅    |
-| Compte utilisateur créé                     | ✅    |
-| Mot de passe sécurisé                       | ✅    |
-| Langue française                            | ✅    |
-| Clavier FR-CH                               | ✅    |
-| Fuseau horaire Europe/Zurich                | ✅    |
-| Connexion réseau fonctionnelle              | ✅    |
-| Windows Update effectué                     | ✅    |
-| Programmes inutiles au démarrage désactivés | ✅    |
-| Plan d'alimentation configuré               | ✅    |
-| Pare-feu Windows Defender actif             | ✅    |
-| Windows Defender actif                      | ✅    |
-| Nettoyage du disque effectué                | ✅    |
-| Point de restauration créé                  | ✅    |
-| `winver` vérifié                            | ✅    |
-| `ipconfig` vérifié                          | ✅    |
-| Applications au démarrage vérifiées         | ✅    |
+| Windows 10 Pro installé                     | OK    |
+| Installation en UEFI                        | OK    |
+| Partitionnement GPT                         | OK    |
+| Nom du poste configuré                      | OK    |
+| Compte utilisateur créé                     | OK    |
+| Mot de passe sécurisé                       | OK    |
+| Langue française                            | OK    |
+| Clavier FR-CH                               | OK    |
+| Fuseau horaire Europe/Zurich                | OK    |
+| Connexion réseau fonctionnelle              | OK    |
+| Windows Update effectué                     | OK    |
+| Programmes inutiles au démarrage désactivés | OK    |
+| Plan d'alimentation configuré               | OK    |
+| Pare-feu Windows Defender actif             | OK    |
+| Windows Defender actif                      | OK    |
+| Nettoyage du disque effectué                | OK    |
+| Point de restauration créé                  | OK    |
+| `winver` vérifié                            | OK    |
+| `ipconfig` vérifié                          | OK    |
+| Applications au démarrage vérifiées         | OK    |
 
 ---
 
@@ -642,22 +642,22 @@ sudo ufw status verbose
 
 | Vérification                           | État |
 | -------------------------------------- | ---- |
-| Ubuntu installé                        | ✅    |
-| Compte utilisateur non-root            | ✅    |
-| Mot de passe sécurisé                  | ✅    |
-| Langue française                       | ✅    |
-| Clavier FR-CH                          | ✅    |
-| Fuseau horaire Europe/Zurich           | ✅    |
-| Connexion réseau fonctionnelle         | ✅    |
-| `sudo apt update` effectué             | ✅    |
-| `sudo apt upgrade` effectué            | ✅    |
-| `sudo apt autoremove` effectué         | ✅    |
-| Services actifs vérifiés               | ✅    |
-| Services activés au démarrage vérifiés | ✅    |
-| Pare-feu UFW activé                    | ✅    |
-| `ip a` vérifié                         | ✅    |
-| `lsb_release -a` vérifié               | ✅    |
-| Poste opérationnel                     | ✅    |
+| Ubuntu installé                        | OK    |
+| Compte utilisateur non-root            | OK    |
+| Mot de passe sécurisé                  | OK    |
+| Langue française                       | OK    |
+| Clavier FR-CH                          | OK    |
+| Fuseau horaire Europe/Zurich           | OK    |
+| Connexion réseau fonctionnelle         | OK    |
+| `sudo apt update` effectué             | OK    |
+| `sudo apt upgrade` effectué            | OK    |
+| `sudo apt autoremove` effectué         | OK    |
+| Services actifs vérifiés               | OK    |
+| Services activés au démarrage vérifiés | OK    |
+| Pare-feu UFW activé                    | OK    |
+| `ip a` vérifié                         | OK    |
+| `lsb_release -a` vérifié               | OK    |
+| Poste opérationnel                     | OK    |
 
 ---
 
