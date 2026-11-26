@@ -177,12 +177,12 @@ Sans la passerelle, le labo est **totalement isolé**. Avec elle, il n'a qu'un *
 
 | Test depuis SVR-FICHIERS | Attendu | Obtenu |
 | --- | --- | --- |
-| `ping 8.8.8.8` | Autorisé | ✅ 4/4 reçus |
-| `ping google.com` | Autorisé (DNS) | ✅ 4/4 reçus |
-| `ping 192.168.208.2` | Bloqué (réseau entreprise) | ✅ 100 % perdus |
-| `Test-NetConnection portquiz.net -Port 80` | Autorisé | ✅ TcpTestSucceeded : True |
-| `Test-NetConnection portquiz.net -Port 8080` | Bloqué | ✅ TcpTestSucceeded : False (le ping passe, la connexion non) |
-| Edge sur google.com | Autorisé (HTTPS) | ✅ page affichée |
+| `ping 8.8.8.8` | Autorisé | 4/4 reçus |
+| `ping google.com` | Autorisé (DNS) | 4/4 reçus |
+| `ping 192.168.208.2` | Bloqué (réseau entreprise) | 100 % perdus |
+| `Test-NetConnection portquiz.net -Port 80` | Autorisé | TcpTestSucceeded : True |
+| `Test-NetConnection portquiz.net -Port 8080` | Bloqué | TcpTestSucceeded : False (le ping passe, la connexion non) |
+| Edge sur google.com | Autorisé (HTTPS) | page affichée |
 
 ![18-tests-ping-internet-dns-nat-bloque](https://hackmd.io/_uploads/S12Wv5IjGg.png)
 
