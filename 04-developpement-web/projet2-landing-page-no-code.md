@@ -36,7 +36,7 @@ Une startup veut tester rapidement l'intérêt pour un nouveau produit via une l
 
 # Livrable 1 : lien de la landing page publiée
 
-🔗 **https://negrechesofia.wixsite.com/my-site-1**
+**https://negrechesofia.wixsite.com/my-site-1**
 
 ---
 
@@ -149,8 +149,8 @@ Le No-Code est idéal pour **tester rapidement une idée**, ce qui correspond ex
 
 ## 5. Bilan
 
-- ✅ Outil No-Code choisi : Wix
-- ✅ Message clé et appel à l'action définis
-- ✅ Page construite (structure + design)
-- ✅ Page publiée en ligne
-- ✅ Choix et limites documentés
+- Outil No-Code choisi : Wix
+- Message clé et appel à l'action définis
+- Page construite (structure + design)
+- Page publiée en ligne
+- Choix et limites documentés
