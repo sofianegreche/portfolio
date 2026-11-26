@@ -92,9 +92,9 @@ Format : **10.site.VLAN.0/24**
 
 | VLAN | Nom | Genève | Lausanne |
 |---|---|---|---|
-| 10 | ADMIN | ✅ | ✅ |
-| 20 | EMPLOYES | ✅ | ✅ |
-| 99 | SERVEURS | ✅ | — |
+| 10 | ADMIN | OK | OK |
+| 20 | EMPLOYES | OK | OK |
+| 99 | SERVEURS | OK | — |
 
 **Configuration des switchs :**
 - Port **e0** → **dot1q** (trunk 802.1Q vers le routeur)
@@ -121,7 +121,7 @@ Format : **10.site.VLAN.0/24**
 | Sécurité | Chiffrement AES-256 | Réseau privé de l'opérateur, pas chiffré par défaut |
 | Débit / latence | Dépend d'Internet, pas garanti | Garanti par contrat (SLA) |
 | Mise en place | Rapide, configuration sur les routeurs | Plusieurs semaines (installation opérateur) |
-| Adapté à une PME | ✅ Oui | Plutôt pour les grandes entreprises |
+| Adapté à une PME | Oui | Plutôt pour les grandes entreprises |
 
 ### 6.2 Choix retenu : VPN IPsec site-à-site
 
@@ -292,9 +292,9 @@ interface Gi1/0
 
 | Test | Résultat attendu | Résultat |
 |---|---|---|
-| PC-EMP-GE → SVR-FICHIERS (VLAN 20 → 99) | Réussi | ✅ |
-| PC-GENEVE → PC-EMP-GE (VLAN 10 → 20) | Réussi | ✅ |
-| PC-LAUSANNE → PC-EMP-LSN (VLAN 10 → 20) | Réussi | ✅ |
+| PC-EMP-GE → SVR-FICHIERS (VLAN 20 → 99) | Réussi | OK |
+| PC-GENEVE → PC-EMP-GE (VLAN 10 → 20) | Réussi | OK |
+| PC-LAUSANNE → PC-EMP-LSN (VLAN 10 → 20) | Réussi | OK |
 
 ![image](https://hackmd.io/_uploads/ryNOwskhze.png)
 
@@ -311,7 +311,7 @@ interface Gi1/0
 
 | Test | Résultat attendu | Résultat |
 |---|---|---|
-| PC-LAUSANNE → SVR-FICHIERS | Échec | ❌ timeout |
+| PC-LAUSANNE → SVR-FICHIERS | Échec | timeout |
 
 ![image](https://hackmd.io/_uploads/BkFiwo1nMx.png)
 
@@ -322,10 +322,10 @@ interface Gi1/0
 
 | Test | Résultat attendu | Résultat |
 |---|---|---|
-| PC-LAUSANNE → SVR-FICHIERS | Réussi | ✅ |
-| `show crypto isakmp sa` | QM_IDLE / ACTIVE | ✅ |
-| `show crypto ipsec sa` | encaps / decaps > 0, 0 erreur | ✅ 9 / 9 |
-| R-ISP → 10.1.10.11 | Échec | ❌ 0 % (voulu) |
+| PC-LAUSANNE → SVR-FICHIERS | Réussi | OK |
+| `show crypto isakmp sa` | QM_IDLE / ACTIVE | OK |
+| `show crypto ipsec sa` | encaps / decaps > 0, 0 erreur | 9 / 9 |
+| R-ISP → 10.1.10.11 | Échec | 0 % (voulu) |
 
 ![image](https://hackmd.io/_uploads/HyF2DoJnMl.png)
 
