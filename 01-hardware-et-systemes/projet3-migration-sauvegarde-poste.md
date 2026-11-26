@@ -192,15 +192,15 @@ Après la migration, j’ai effectué une vérification générale de la machine
 
 | Vérification                            | Résultat |
 | --------------------------------------- | -------- |
-| Système correctement installé           | ✅        |
-| Système démarré correctement            | ✅        |
-| Mises à jour installées                 | ✅        |
-| Logiciels nécessaires installés         | ✅        |
-| Données restaurées                      | ✅        |
-| Documents accessibles                   | ✅        |
-| Favoris restaurés                       | ✅        |
-| Fichiers correctement ouverts           | ✅        |
-| Connexion réseau de la VM fonctionnelle | ✅        |
+| Système correctement installé           | OK        |
+| Système démarré correctement            | OK        |
+| Mises à jour installées                 | OK        |
+| Logiciels nécessaires installés         | OK        |
+| Données restaurées                      | OK        |
+| Documents accessibles                   | OK        |
+| Favoris restaurés                       | OK        |
+| Fichiers correctement ouverts           | OK        |
+| Connexion réseau de la VM fonctionnelle | OK        |
 
 La configuration d'une imprimante n'a pas été nécessaire dans le cadre de ce projet.
 
@@ -280,19 +280,19 @@ La sauvegarde réalisée avant la réinstallation a permis de limiter le risque 
 
 # 12. Points de vigilance
 
-> ⚠️ **Sauvegarde avant réinstallation :** ne jamais commencer la réinstallation sans avoir vérifié la sauvegarde.
+> **Sauvegarde avant réinstallation :** ne jamais commencer la réinstallation sans avoir vérifié la sauvegarde.
 
-> ⚠️ **Clé USB :** vérifier que les fichiers sont réellement présents et accessibles sur la clé USB.
+> **Clé USB :** vérifier que les fichiers sont réellement présents et accessibles sur la clé USB.
 
-> ⚠️ **Favoris :** penser à sauvegarder les favoris avant de supprimer l'ancien système.
+> **Favoris :** penser à sauvegarder les favoris avant de supprimer l'ancien système.
 
-> ⚠️ **Logiciels :** vérifier avant la réinstallation que les logiciels nécessaires pourront être réinstallés.
+> **Logiciels :** vérifier avant la réinstallation que les logiciels nécessaires pourront être réinstallés.
 
-> ⚠️ **Machine virtuelle :** contrairement à un poste physique, il n'est pas nécessaire de relever manuellement les paramètres réseau dans le cadre de ce projet.
+> **Machine virtuelle :** contrairement à un poste physique, il n'est pas nécessaire de relever manuellement les paramètres réseau dans le cadre de ce projet.
 
-> ⚠️ **Données importantes :** vérifier également les fichiers présents sur le Bureau et dans les Téléchargements.
+> **Données importantes :** vérifier également les fichiers présents sur le Bureau et dans les Téléchargements.
 
-> ⚠️ **Vérification finale :** ouvrir plusieurs fichiers après restauration afin de confirmer que les données sont exploitables.
+> **Vérification finale :** ouvrir plusieurs fichiers après restauration afin de confirmer que les données sont exploitables.
 
 ---
 
