@@ -81,8 +81,8 @@ Jeu 3D de course sur un **toboggan aquatique**, réalisé en groupe à 5 selon u
 - Décor : mer, petites îles (sable, herbe, lagon), palmiers, rochers, grande île avec piscine.
 
 **Tests réalisés** avec les vrais scripts du groupe (`PlayerMovement`, `PlayerCollision`, `RespawnManager`) :
-- Sans sauter : chute dans le trou puis réapparition au checkpoint précédent ✔
-- Avec saut : les 3 trous passés, 16 checkpoints, arrivée détectée ✔
+- Sans sauter : chute dans le trou puis réapparition au checkpoint précédent
+- Avec saut : les 3 trous passés, 16 checkpoints, arrivée détectée
 - 0 erreur, 0 avertissement dans la Console
 
 ### Ce que j'ai appris
