@@ -114,7 +114,7 @@ Par défaut, VMware donne à la carte de l'hôte la première adresse du réseau
 
 Au démarrage, les trois routeurs n'avaient aucune configuration : toutes les interfaces étaient « unassigned / administratively down » (voir incident 1).
 
-📸 **09 – R1, R2, R3 : show ip interface brief avant configuration**
+**09 – R1, R2, R3 : show ip interface brief avant configuration**
 `09_routeurs-vierges`![Capture d'écran 2026-10-03 150536](https://hackmd.io/_uploads/rkiw6cA9Me.png)![Capture d'écran 2026-10-03 151010](https://hackmd.io/_uploads/Hk1Fa509zl.png)
 ![Capture d'écran 2026-10-03 151017](https://hackmd.io/_uploads/Sykta909Gl.png)
 
@@ -216,8 +216,8 @@ Codes : C = réseau directement connecté, L = adresse du routeur lui-même, S =
 
 | Depuis | Vers | Résultat |
 |---|---|---|
-| R1 | R3, côté LAN-2 (192.168.23.1) | ✅ |
-| R1 (source LAN-1) | Internet (8.8.8.8) | ✅ |
+| R1 | R3, côté LAN-2 (192.168.23.1) | OK |
+| R1 (source LAN-1) | Internet (8.8.8.8) | OK |
 
 Le ping vers 8.8.8.8 est lancé avec `source g0/0` pour partir de l'adresse du LAN : il prouve que le routage et le NAT de R2 fonctionnent.
 
@@ -252,7 +252,7 @@ Pour que PC1 réponde au ping, le pare-feu Windows a été ouvert à l'ICMP (inc
 netsh advfirewall firewall add rule name="ICMP" protocol=icmpv4:8,any dir=in action=allow
 ```
 
-📸 **21 – PC1 : règle pare-feu ICMP ajoutée (Ok.)**
+**21 – PC1 : règle pare-feu ICMP ajoutée (Ok.)**
 `21_PC1_netsh-ICMP`
 
 ### Tests depuis les postes
@@ -269,23 +269,23 @@ netsh advfirewall firewall add rule name="ICMP" protocol=icmpv4:8,any dir=in act
 
 | Depuis | Vers | Résultat |
 |---|---|---|
-| PC2 | Passerelle R3 (192.168.23.1) | ✅ |
-| PC2 | PC1 (192.168.20.10) | ✅ |
-| PC1 | PC2 (192.168.23.10) | ✅ |
-| PC1 / PC2 | Internet (8.8.8.8) | ✅ |
-| PC1 / PC2 | google.com | ❌ résolution DNS impossible (incident 4) |
+| PC2 | Passerelle R3 (192.168.23.1) | OK |
+| PC2 | PC1 (192.168.20.10) | OK |
+| PC1 | PC2 (192.168.23.10) | OK |
+| PC1 / PC2 | Internet (8.8.8.8) | OK |
+| PC1 / PC2 | google.com | résolution DNS impossible (incident 4) |
 
 ### Bilan de la partie 1
 
 | Élément | Résultat |
 |---|---|
-| VMnet1 et VMnet2 en Host-only, DHCP désactivé | ✅ |
-| Trois nœuds Cloud : VMnet1, VMnet2, VMnet8 | ✅ |
-| Interfaces des 3 routeurs up/up | ✅ |
-| Routage statique | ✅ |
-| NAT sur R2, accès Internet par IP | ✅ |
-| Communication PC1 ↔ PC2 | ✅ |
-| Résolution DNS depuis les VM | ❌ (limite VMware, voir incident 4) |
+| VMnet1 et VMnet2 en Host-only, DHCP désactivé | OK |
+| Trois nœuds Cloud : VMnet1, VMnet2, VMnet8 | OK |
+| Interfaces des 3 routeurs up/up | OK |
+| Routage statique | OK |
+| NAT sur R2, accès Internet par IP | OK |
+| Communication PC1 ↔ PC2 | OK |
+| Résolution DNS depuis les VM | (limite VMware, voir incident 4) |
 
 ---
 
@@ -330,7 +330,7 @@ ssh -oKexAlgorithms=+diffie-hellman-group14-sha1 -oHostKeyAlgorithms=+ssh-rsa -o
 ```
 ![image](https://hackmd.io/_uploads/Bkwd4oA9fg.png)
 
-📸 **32![image](https://hackmd.io/_uploads/H155NsA5Me.png)
+**32![image](https://hackmd.io/_uploads/H155NsA5Me.png)
 
 
 ### Connexions Telnet depuis les postes
@@ -349,10 +349,10 @@ dism /online /Enable-Feature /FeatureName:TelnetClient
 
 | Test | Résultat |
 |---|---|
-| SSH PC1 → R1 | ✅ |
-| SSH PC2 → R3 | ✅ |
-| Telnet PC1 → R3 | ✅ |
-| Telnet PC2 → R1 | ✅ |
+| SSH PC1 → R1 | OK |
+| SSH PC2 → R3 | OK |
+| Telnet PC1 → R3 | OK |
+| Telnet PC2 → R1 | OK |
 
 ---
 
@@ -428,14 +428,14 @@ Telnet ne doit pas être utilisé pour administrer les routeurs : n'importe qui 
 
 | Demandé | Résultat |
 |---|---|
-| Plan d'adressage et interfaces up/up | ✅ |
-| Routage statique entre les sites | ✅ |
-| Accès Internet par NAT | ✅ |
-| Communication entre les deux postes | ✅ |
-| Sécurité de base (enable secret, chiffrement, bannière, console) | ✅ |
-| SSH et Telnet depuis les deux postes | ✅ |
-| Démonstration Wireshark Telnet / SSH | ✅ |
-| Configuration sauvegardée | ✅ |
+| Plan d'adressage et interfaces up/up | OK |
+| Routage statique entre les sites | OK |
+| Accès Internet par NAT | OK |
+| Communication entre les deux postes | OK |
+| Sécurité de base (enable secret, chiffrement, bannière, console) | OK |
+| SSH et Telnet depuis les deux postes | OK |
+| Démonstration Wireshark Telnet / SSH | OK |
+| Configuration sauvegardée | OK |
 
 ## Fichiers joints
 
