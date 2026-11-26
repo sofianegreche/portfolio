@@ -1,16 +1,12 @@
-# 📂 Portfolio – Sofia Negreche
-
-<p>
-  <a href="https://github.com/sofianegreche"><img src="https://img.shields.io/badge/Profil-GitHub-24292F?style=flat-square&logo=github&logoColor=white" alt="Profil GitHub"></a>
-  <a href="https://www.linkedin.com/in/sofia-negreche-119a88433/"><img src="https://img.shields.io/badge/LinkedIn-Sofia%20Negreche-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:Sofia.negreche@git.swiss"><img src="https://img.shields.io/badge/E--mail-Me%20contacter-1A4B79?style=flat-square&logo=maildotru&logoColor=white" alt="E-mail"></a>
-</p>
+# Portfolio – Sofia Negreche
 
 Étudiante en **Bachelor IT** – classe E1A, Geneva Institute of Technology (Genève).
 
+[Profil GitHub](https://github.com/sofianegreche) · [LinkedIn](https://www.linkedin.com/in/sofia-negreche-119a88433/) · [E-mail](mailto:Sofia.negreche@git.swiss)
+
 Ce dépôt regroupe mes comptes rendus de formation : hardware, systèmes, virtualisation, réseau, développement web et cloud.
 
-## 👥 Projets de groupe
+## Projets de groupe
 
 Le détail de ce que j'ai fait dans chaque projet : **[Mes parties dans les projets de groupe](00-projets-de-groupe/mes-parties-dans-les-projets.md)**
 
@@ -19,7 +15,7 @@ Le détail de ce que j'ai fait dans chaque projet : **[Mes parties dans les proj
 | Cartes de compétences | Site de recrutement avec cartes style FIFA et % de compatibilité (groupe de 5) | Administratrice : page Admin, mentions légales (nLPD), accord photo, page Mon équipe, relecture des PR | HTML, CSS, JavaScript (modules), Firebase |
 | AquaPark | Jeu 3D de course sur toboggan aquatique (groupe de 5) | Personne 2 : circuit et environnement 3D (TrackPath, checkpoints, générateur de circuit, décor) | Unity, C#, Splines |
 
-## 📝 Comptes rendus
+## Comptes rendus
 
 ### Hardware et systèmes
 
@@ -62,9 +58,9 @@ Le détail de ce que j'ai fait dans chaque projet : **[Mes parties dans les proj
 
 ### Cloud
 
-- [Création d'une VM Debian 13 pour héberger GLPI](05-cloud/vm-debian-glpi-openstack.md) *(en cours)*
+- [Création d'une VM Debian 13 pour héberger GLPI](05-cloud/vm-debian-glpi-openstack.md) (en cours)
 
-## 🛠️ Compétences
+## Compétences
 
 - Hardware et systèmes : configuration de PC, installation et déploiement de Windows et Linux
 - Virtualisation : VMware, Proxmox, ESXi, snapshots, migration P2V
